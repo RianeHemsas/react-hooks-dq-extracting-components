@@ -1,5 +1,8 @@
 import React from "react";
 import { messages, contacts } from "../data";
+import ContactList from "./ContactList";
+import Main from "./Main";
+
 
 console.log("Messages:", messages);
 console.log("Contacts:", contacts);
@@ -7,7 +10,11 @@ console.log("Contacts:", contacts);
 function App() {
   return (
     <div className="app">
-      <nav>
+      <ContactList contacts={contacts}/>
+
+        <Main messages={messages}/>
+
+      {/* <nav>
         <h2>Contacts</h2>
         <ul className="contacts">
           <li className="contact">
@@ -27,9 +34,9 @@ function App() {
             Rita
           </li>
         </ul>
-      </nav>
-      <main>
-        <h2>Messages</h2>
+      </nav> */}
+    
+        {/* <h2>Messages</h2>
         <section className="messages">
           <ul>
             <li className="message sent">
@@ -49,11 +56,9 @@ function App() {
               <span className="content">🎺🎺🎺🎺🎺</span>
             </li>
           </ul>
-        </section>
-        <form className="message-form">
-          <input placeholder="Type a message..." />
-        </form>
-      </main>
+        </section> */}
+      
+     
     </div>
   );
 }
